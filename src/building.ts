@@ -17,11 +17,13 @@ export class Building {
     }
 }
 
-export class Apartment implements Building {
+export class Apartment extends Building {
     constructor(
         public floors: number,
         public area: number,
-    ) {}
+    ) {
+        super();
+    }
 
     getSize(): number {
         return this.floors * this.area;
